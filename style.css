@@ -26,7 +26,6 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  gap: 30px;
   margin-top: 100px;
   padding-bottom: 40px;
 }
@@ -39,13 +38,9 @@ nav {
   width: 100%;
 }
 
-section {
-  padding-bottom: 50px;
-}
-
 section,
 footer {
-  padding-inline: 20px;
+  padding: 40px 20px;
 }
 
 footer {
@@ -55,9 +50,8 @@ footer {
   display: flex;
   flex-direction: column;
   font-size: 12px;
-  gap: 40px;
+  gap: 20px;
   justify-content: center;
-  padding-block: 20px;
 }
 
 b {
@@ -78,6 +72,10 @@ b {
 .logo-container img {
   height: 100%;
   width: 100%;
+}
+
+.section1 {
+  padding: 0;
 }
 
 .texts {
@@ -130,6 +128,7 @@ b {
 }
 
 .section4 {
+  /* background-color: #d3d3d3; */
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -273,13 +272,12 @@ b {
 }
 
 .carousel {
-  background: red;
-  position: relative;
   height: fit-content;
-  width: 100%;
+  margin: auto;
   max-width: 100%;
   overflow: hidden;
-  margin: auto;
+  position: relative;
+  width: 100%;
 }
 
 .carousel-inner {
@@ -288,29 +286,29 @@ b {
 }
 
 .slide {
-  min-width: 100%;
   box-sizing: border-box;
+  min-width: 100%;
 }
 
 .carousel img {
-  height: 100%;
+  display: block;
+  height: fit-content;
   object-fit: contain;
   object-position: top;
   width: 100%;
-  display: block;
 }
 
 button.prev,
 button.next {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+  padding: 10px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  display: none;
   z-index: 1000;
 }
 
@@ -421,6 +419,21 @@ button.next {
   font-size: 14px;
 }
 
+.location div {
+  display: none;
+}
+
+.gmail {
+  display: none;
+}
+
+.footerdesc {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 @media (min-width: 1024px) {
   .navlinks {
     display: flex;
@@ -431,6 +444,7 @@ button.next {
   }
 
   .carousel img {
+    height: 100%;
     object-fit: cover;
     object-position: top;
   }
@@ -467,7 +481,7 @@ button.next {
 
   .sf-d {
     align-content: center;
-    background: #fff;
+    background: #d3d3d3;
     height: 500px;
     width: 100%;
   }
@@ -475,6 +489,7 @@ button.next {
   .footerdesc {
     align-items: center;
     display: flex;
+    flex-direction: row;
     gap: 20px;
   }
 
@@ -485,6 +500,14 @@ button.next {
     flex-direction: column;
     gap: 10px;
     /* width: fit-content; */
+  }
+
+  .location div {
+    display: flex;
+  }
+
+  .gmail {
+    display: flex;
   }
 
   .mail-img {
@@ -520,7 +543,7 @@ button.next {
   }
 
   .p-dropdown {
-    background: #ffffff3b;
+    background: #fff;
     display: none;
     flex-direction: column;
     gap: 20px;
@@ -530,7 +553,7 @@ button.next {
   }
 
   .p-dropdown a {
-    color: #fff;
+    color: #2e2e2e;
     font-size: 12px;
     text-decoration: none;
   }

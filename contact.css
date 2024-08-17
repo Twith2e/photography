@@ -1,7 +1,7 @@
 input {
   border: none;
   outline: none;
-  padding: 10px 5px;
+  padding: 10px 7px;
   width: 100%;
 }
 
@@ -46,4 +46,11 @@ form div {
   flex-direction: column;
   gap: 20px;
   padding-inline: 20px;
+}
+
+@media (min-width: 1024px) {
+  .contact-container {
+    margin: auto;
+    width: 60%;
+  }
 }
