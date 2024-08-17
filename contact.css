@@ -1,0 +1,49 @@
+input {
+  border: none;
+  outline: none;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+button {
+  background: none;
+  border: 1px solid #000;
+  color: #ffd700;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 10ms;
+}
+
+button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+form div {
+  width: 100%;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ni-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-inline: 20px;
+}
