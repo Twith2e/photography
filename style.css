@@ -28,6 +28,7 @@ main {
   flex-direction: column;
   margin-top: 100px;
   padding-bottom: 40px;
+  width: 100%;
 }
 
 nav {
