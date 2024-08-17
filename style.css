@@ -20,6 +20,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 2;
 }
 
 main {
@@ -271,6 +272,61 @@ b {
   text-decoration: none;
 }
 
+.carousel {
+  background: red;
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel img {
+  height: 100%;
+  object-fit: contain;
+  object-position: top;
+  width: 100%;
+  display: block;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+.carousel:hover button.prev,
+.carousel:hover button.next {
+  display: block;
+}
+
 .sidebar {
   align-items: center;
   background: #fff;
@@ -368,6 +424,15 @@ b {
 @media (min-width: 1024px) {
   .navlinks {
     display: flex;
+  }
+
+  .carousel {
+    height: 700px;
+  }
+
+  .carousel img {
+    object-fit: cover;
+    object-position: top;
   }
 
   .menubtn {

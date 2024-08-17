@@ -5,6 +5,7 @@ const portDd = document.getElementById("portdd-container");
 const portLinkDropDwn = document.getElementById("portlinkdd");
 const sideBar = document.getElementById("sidebar");
 const closeBtn = document.getElementById("closebtn");
+const slides = document.querySelectorAll(".carousel .slide");
 let isMouseOnDD = false;
 let isPortDd = false;
 
@@ -63,3 +64,32 @@ portDd.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   sideBar.style.display = "none";
 });
+
+if (slides) {
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+  const carouselInner = document.querySelector(".carousel-inner");
+
+  function updateCarousel() {
+    const offset = -currentIndex * 100;
+    carouselInner.style.transform = `translateX(${offset}%)`;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  }
+
+  document.querySelector(".next").addEventListener("click", nextSlide);
+  document.querySelector(".prev").addEventListener("click", prevSlide);
+
+  updateCarousel();
+
+  // Automatically move to the next slide every 3 seconds
+  setInterval(nextSlide, 10000);
+}
