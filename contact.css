@@ -48,14 +48,14 @@ form div {
   padding-inline: 20px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 50em) and (max-width: 64em) {
   .contact-container {
     margin: 60px auto;
     width: 60%;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   .contact-container {
     margin: auto;
     width: 60%;

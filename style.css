@@ -50,7 +50,7 @@ footer {
   color: #d3d3d3;
   display: flex;
   flex-direction: column;
-  font-size: 12px;
+  font-size: 0.75em;
   gap: 20px;
   justify-content: center;
 }
@@ -86,7 +86,7 @@ b {
 }
 
 .texts-head {
-  font-size: 26px;
+  font-size: 1.625em;
   line-height: 30px;
   width: 100%;
 }
@@ -116,7 +116,7 @@ b {
 .section3 {
   background: #fff;
   color: #000;
-  font-size: 18px;
+  font-size: 1.125em;
   padding-block: 50px;
 }
 
@@ -129,15 +129,15 @@ b {
 }
 
 .section4 {
-  /* background-color: #d3d3d3; */
   display: flex;
   flex-direction: column;
+  height: fit-content;
   padding: 0;
 }
 
 .section4 a {
   color: #fff;
-  font-size: 24px;
+  font-size: 1.5em;
   text-decoration: none;
   padding: 20px 40px;
 }
@@ -162,7 +162,7 @@ b {
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-size: 15px;
+  font-size: 0.9375em;
   gap: 20px;
   line-height: 30px;
 }
@@ -233,7 +233,7 @@ b {
 
 .navlink a {
   color: #d3d3d3;
-  font-size: 12px;
+  font-size: 1em;
   position: relative;
   text-decoration: none;
 }
@@ -258,7 +258,7 @@ b {
 .navlink {
   color: #d3d3d3;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 0.75em;
 }
 
 .nav-cl {
@@ -268,7 +268,7 @@ b {
 
 .nav-cl a {
   color: #fff;
-  font-size: 12px;
+  font-size: 0.75em;
   text-decoration: none;
 }
 
@@ -343,7 +343,7 @@ button.next {
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-size: 24px;
+  font-size: 1.5em;
   gap: 10px;
   padding-inline: 20px;
   text-align: center;
@@ -417,7 +417,7 @@ button.next {
 
 .menu-contact a {
   color: #2e2e2e;
-  font-size: 14px;
+  font-size: 0.875em;
 }
 
 .location div {
@@ -435,7 +435,71 @@ button.next {
   gap: 20px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 50em) and (max-width: 64em) {
+  .texts {
+    align-items: center;
+    flex-direction: row;
+    gap: 10%;
+    padding-inline: 50px;
+    width: 100%;
+  }
+
+  .texts-head,
+  .job-desc {
+    font-size: 0.9375em;
+  }
+
+  .section4 {
+    flex-direction: row;
+    gap: 5px;
+    height: fit-content;
+    width: 100%;
+  }
+
+  .sf-d {
+    align-content: center;
+    background: #d3d3d3;
+    height: 500px;
+    width: 100%;
+  }
+  .footerdesc {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .location,
+  .flink {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .location div {
+    display: flex;
+  }
+
+  .gmail {
+    display: flex;
+  }
+
+  .mail-img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .IG {
+    display: none;
+  }
+
+  .portfolio {
+    position: relative;
+  }
+}
+
+@media (min-width: 64em) {
   .navlinks {
     display: flex;
   }
@@ -477,6 +541,7 @@ button.next {
   .section4 {
     flex-direction: row;
     gap: 5px;
+    height: fit-content;
     width: 100%;
   }
 
@@ -555,7 +620,7 @@ button.next {
 
   .p-dropdown a {
     color: #2e2e2e;
-    font-size: 12px;
+    font-size: 0.75em;
     text-decoration: none;
   }
 
